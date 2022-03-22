@@ -1,0 +1,33 @@
+let solo = pI "solo"
+
+d1
+$ slow "<4 1>"
+$ n "9*16 5*4"
+# stack [
+    s "perc",
+    s "hats"
+]
+# cps (segment "<t(5,8) f(3,8)>" $ range 1.85 1.15 sine)
+# djf (range 0.55 0.95 sine)
+# room 0.2
+# size 0.3
+# legato 1
+
+d2
+$ slow 2
+$ n "[0 ~ ~ 0] [~ 0]"
+# s "sherman-808"
+# legato 1
+# djf 0.5
+-- # speed "[1 ~ ~ 2] [~ 4]"
+# solo 1
+
+d3
+$ stut "4 2" 0.25 (1/12)
+$ slow 2
+$ n "~ <[5 ~] [~ 1 ~ ~]>"
+# s "snare"
+# legato 1
+# djf (range 0.5 0.75 saw)
+
+hush

@@ -1,0 +1,30 @@
+let mode = pI "mode"
+
+d1
+$ stut 4 "0.4!3 0.5" (1/16)
+$ slow "<1 ~ 2 ~>"
+$ n "4*16 2*8"
+# stack [
+    s "perc",
+    s "hats"
+]
+# cps (segment "t(3,8)" $ range 1.85 0.15 sine)
+# djf (fast 2 $ range 0.15 0.45 saw)
+# squiz (segment 16 $ range 3 4 tri)
+# legato 1
+
+d2
+$ stut 4 0.2 (1/16)
+$ n "<0 [~ 0]> ~"
+# s "sherman-808"
+# legato 1
+# speed "<<1 3> <2 1.5>> 1"
+# djf 0.5
+
+d3
+$ n "~ <~ 4>"
+# s "hats"
+# legato 1
+# mode "1"
+
+hush
