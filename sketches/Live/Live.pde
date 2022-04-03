@@ -6,6 +6,7 @@ int frames = 60;
 float cps;
 boolean state;
 color backgroundColour;
+Message testMessage = new Message();
 
 class MyShape {
   PVector centre;
@@ -73,6 +74,8 @@ void setup() {
   frameRate(frames);
   oscP5 = new OscP5(this, 2020);
   state = false;
+  testMessage.cps = 2;
+  testMessage.mode = 1;
   
   rectMode(CENTER);
   noStroke();
@@ -115,6 +118,11 @@ void oscEvent(OscMessage m) { //<>//
   if (msg.cycle % 1 == 0 && cps == 0) {
     cps = msg.cps;
   }
+}
+
+void mouseClicked() {
+  state = true;
+  shapes[testMessage.orbit].update(testMessage);
 }
 
 class Message {
