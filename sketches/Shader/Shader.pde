@@ -24,14 +24,12 @@ void draw() {
   shader.set("u_orbit_2", bus[2]);
   shader.set("u_orbit_3", bus[3]);
   
-  decay();
+  advance();
 }
 
-void decay() {
+void advance() {
   for (int i = 0; i < bus.length; i++) {
-    if (bus[i] > 0.0) {
-      bus[i] = bus[i] - 0.025;
-    }
+    bus[i] = bus[i] + 0.025;
   }
 }
 
@@ -44,5 +42,5 @@ void oscEvent(OscMessage m){
 }
 
 void routeMessage(Message msg) {
-  bus[msg.orbit] = 1.0;
+  bus[msg.orbit] = 0.0;
 }
