@@ -1,0 +1,157 @@
+{
+	"type": "Project",
+	"version": 1,
+	"name": "2022-04-18",
+	"rootPath": "C:\\Git\\tidal-av-project\\samples",
+	"assets": [
+		{
+			"type": "ProjectAsset",
+			"version": 1,
+			"filename": "kick/Lithe - CLUB UTILITIES -SAMPLE PACK- - 04 Kick - Cardboard Kick.aiff",
+			"databasePath": "C:\\Git\\tidal-project-1\\samples\\club-utilities\\sononym.db",
+			"exportPath": "kicks/"
+		},
+		{
+			"type": "ProjectAsset",
+			"version": 1,
+			"filename": "kick/Lithe - CLUB UTILITIES -SAMPLE PACK- - 21 Kick - Snare Kick.aiff",
+			"databasePath": "C:\\Git\\tidal-project-1\\samples\\club-utilities\\sononym.db",
+			"exportPath": "kicks/"
+		},
+		{
+			"type": "ProjectAsset",
+			"version": 1,
+			"filename": "hats/Lithe - CLUB UTILITIES -SAMPLE PACK- - 41 Hats - Noise Hat.aiff",
+			"databasePath": "C:\\Git\\tidal-project-1\\samples\\club-utilities\\sononym.db",
+			"exportPath": "hats/"
+		},
+		{
+			"type": "ProjectAsset",
+			"version": 1,
+			"filename": "loops/Lithe - CLUB UTILITIES -SAMPLE PACK- - 90 Loop - Jaar Loop (110 BPM).aiff",
+			"databasePath": "C:\\Git\\tidal-project-1\\samples\\club-utilities\\sononym.db",
+			"exportPath": "loops/"
+		},
+		{
+			"type": "ProjectAsset",
+			"version": 1,
+			"filename": "",
+			"databasePath": "",
+			"exportPath": "kicks/"
+		},
+		{
+			"type": "ProjectAsset",
+			"version": 1,
+			"filename": "",
+			"databasePath": "",
+			"exportPath": "hats/"
+		},
+		{
+			"type": "ProjectAsset",
+			"version": 1,
+			"filename": "",
+			"databasePath": "",
+			"exportPath": "loops/"
+		},
+		{
+			"type": "ProjectAsset",
+			"version": 1,
+			"filename": "",
+			"databasePath": "",
+			"exportPath": "perc/"
+		},
+		{
+			"type": "ProjectAsset",
+			"version": 1,
+			"filename": "",
+			"databasePath": "",
+			"exportPath": "snares/"
+		},
+		{
+			"type": "ProjectAsset",
+			"version": 1,
+			"filename": "snare/Lurka - Lurka Sample Pack - 36 LurkaSnare-Wclipp.aiff",
+			"databasePath": "C:\\Git\\tidal-project-1\\samples\\lurka-sample-pack\\sononym.db",
+			"exportPath": "snares/"
+		},
+		{
+			"type": "ProjectAsset",
+			"version": 1,
+			"filename": "snare/Lurka - Lurka Sample Pack - 50 LurkaSnare-S_Dink.aiff",
+			"databasePath": "C:\\Git\\tidal-project-1\\samples\\lurka-sample-pack\\sononym.db",
+			"exportPath": "snares/"
+		},
+		{
+			"type": "ProjectAsset",
+			"version": 1,
+			"filename": "perc/Lithe - CLUB UTILITIES -SAMPLE PACK- - 54 Perc - Finger.aiff",
+			"databasePath": "C:\\Git\\tidal-project-1\\samples\\club-utilities\\sononym.db",
+			"exportPath": "perc/"
+		},
+		{
+			"type": "ProjectAsset",
+			"version": 1,
+			"filename": "perc/Lithe - CLUB UTILITIES -SAMPLE PACK- - 58 Perc - Hand.aiff",
+			"databasePath": "C:\\Git\\tidal-project-1\\samples\\club-utilities\\sononym.db",
+			"exportPath": "perc/"
+		},
+		{
+			"type": "ProjectAsset",
+			"version": 1,
+			"filename": "perc/Lurka - Lurka Sample Pack - 63 LurkaPerc-DistyB.aiff",
+			"databasePath": "C:\\Git\\tidal-project-1\\samples\\lurka-sample-pack\\sononym.db",
+			"exportPath": "perc/"
+		},
+		{
+			"type": "ProjectAsset",
+			"version": 1,
+			"filename": "perc/Lurka - Lurka Sample Pack - 80 LurkaPerc-Stresshat.aiff",
+			"databasePath": "C:\\Git\\tidal-project-1\\samples\\lurka-sample-pack\\sononym.db",
+			"exportPath": "perc/"
+		},
+		{
+			"type": "ProjectAsset",
+			"version": 1,
+			"filename": "perc/Lurka - Lurka Sample Pack - 82 LurkaPerc-TwangDreem.aiff",
+			"databasePath": "C:\\Git\\tidal-project-1\\samples\\lurka-sample-pack\\sononym.db",
+			"exportPath": "perc/"
+		},
+		{
+			"type": "ProjectAsset",
+			"version": 1,
+			"filename": "",
+			"databasePath": "",
+			"exportPath": "fx/"
+		},
+		{
+			"type": "ProjectAsset",
+			"version": 1,
+			"filename": "fx/Lurka - Lurka Sample Pack - 94 LurkaFX-Spacekrok.aiff",
+			"databasePath": "C:\\Git\\tidal-project-1\\samples\\lurka-sample-pack\\sononym.db",
+			"exportPath": "fx/"
+		},
+		{
+			"type": "ProjectAsset",
+			"version": 1,
+			"filename": "fx/Lurka - Lurka Sample Pack - 95 LurkaFX-Inswep.aiff",
+			"databasePath": "C:\\Git\\tidal-project-1\\samples\\lurka-sample-pack\\sononym.db",
+			"exportPath": "fx/"
+		},
+		{
+			"type": "ProjectAsset",
+			"version": 1,
+			"filename": "fx/Lurka - Lurka Sample Pack - 96 LurkaFX-REVRise 1.aiff",
+			"databasePath": "C:\\Git\\tidal-project-1\\samples\\lurka-sample-pack\\sononym.db",
+			"exportPath": "fx/"
+		},
+		{
+			"type": "ProjectAsset",
+			"version": 1,
+			"filename": "fx/Lurka - Lurka Sample Pack - 98 LurkaFX-MoogSpray.aiff",
+			"databasePath": "C:\\Git\\tidal-project-1\\samples\\lurka-sample-pack\\sononym.db",
+			"exportPath": "fx/"
+		}
+	],
+	"expandedFolders": [],
+	"autoExportEnabled": false
+}
