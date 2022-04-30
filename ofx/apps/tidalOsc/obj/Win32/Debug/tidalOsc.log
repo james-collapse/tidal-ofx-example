@@ -1,0 +1,44 @@
+﻿  main.cpp
+  ofApp.cpp
+  Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
+  Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
+C:\Users\James\Git\tidal-av-project\ofx\apps\tidalOsc\src\ofApp.cpp(14,6): warning C4996: 'ofxOscReceiver::getNextMessage': Pass a reference instead of a pointer
+  ofxOscBundle.cpp
+  ofxOscMessage.cpp
+  ofxOscParameterSync.cpp
+  ofxOscReceiver.cpp
+  ofxOscSender.cpp
+  Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
+  Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
+  Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
+  Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
+  Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
+  IpEndpointName.cpp
+C:\Users\James\Documents\of_v0.11.2_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\IpEndpointName.cpp(54,8): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\James\Documents\of_v0.11.2_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\IpEndpointName.cpp(56,8): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\James\Documents\of_v0.11.2_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\IpEndpointName.cpp(69,9): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\James\Documents\of_v0.11.2_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\IpEndpointName.cpp(71,9): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\James\Documents\of_v0.11.2_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\IpEndpointName.cpp(79,9): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\James\Documents\of_v0.11.2_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\IpEndpointName.cpp(81,9): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  NetworkingUtils.cpp
+  UdpSocket.cpp
+C:\Users\James\Documents\of_v0.11.2_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\win32\NetworkingUtils.cpp(88,25): warning C4996: 'gethostbyname': Use getaddrinfo() or GetAddrInfoW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  OscOutboundPacketStream.cpp
+  OscPrintReceivedElements.cpp
+  OscReceivedElements.cpp
+  OscTypes.cpp
+C:\Users\James\Documents\of_v0.11.2_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscOutboundPacketStream.cpp(363,10): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\James\Documents\of_v0.11.2_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscOutboundPacketStream.cpp(605,10): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\James\Documents\of_v0.11.2_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscOutboundPacketStream.cpp(625,10): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\James\Documents\of_v0.11.2_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscPrintReceivedElements.cpp(129,47): warning C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     Creating library bin\tidalOsc_debug.lib and object bin\tidalOsc_debug.exp
+  tidalOsc.vcxproj -> C:\Users\James\Git\tidal-av-project\ofx\apps\tidalOsc\bin\tidalOsc_debug.exe
+  
+  	                   2	C:\Users\James\Documents\of_v0.11.2_vs2017_release\libs\fmod\lib\vs\Win32\
+  	    New File  		 1544704	C:\Users\James\Documents\of_v0.11.2_vs2017_release\libs\fmod\lib\vs\Win32\fmod.dll
+  	    New File  		 1733120	C:\Users\James\Documents\of_v0.11.2_vs2017_release\libs\fmod\lib\vs\Win32\fmodL.dll
+  
+  	                   1	C:\Users\James\Documents\of_v0.11.2_vs2017_release\libs\FreeImage\lib\vs\Win32\
+  	  *EXTRA File 		 1544704	C:\Users\James\Git\tidal-av-project\ofx\apps\tidalOsc\bin\fmod.dll
+  	  *EXTRA File 		 1733120	C:\Users\James\Git\tidal-av-project\ofx\apps\tidalOsc\bin\fmodL.dll
+  	    New File  		 6018560	C:\Users\James\Documents\of_v0.11.2_vs2017_release\libs\FreeImage\lib\vs\Win32\FreeImage.dll
