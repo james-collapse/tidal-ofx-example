@@ -7,8 +7,8 @@ hSetEncoding stdout utf8
 
 -- total latency = oLatency + cFrameTimespan
 let oscplay = OSC "/oscplay" Named {requiredArgs = ["s", "mode"]}
- 
-tidal <- startStream (defaultConfig {cFrameTimespan = 1/20}) [(superdirtTarget {oLatency = 0.2, oAddress = "127.0.0.1", oPort = 57120}, [superdirtShape]), (superdirtTarget {oAddress = "127.0.0.1", oPort = 2020, oSchedule = Live}, [oscplay])]
+
+tidal <- startStream (defaultConfig {cFrameTimespan = 1/20}) [(superdirtTarget {oLatency = 0.2, oAddress = "127.0.0.1", oPort = 57121}, [superdirtShape]), (superdirtTarget {oAddress = "127.0.0.1", oPort = 2020, oSchedule = Live}, [oscplay])]
 
 :{
 let p = streamReplace tidal
