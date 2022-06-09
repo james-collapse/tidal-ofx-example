@@ -1,11 +1,11 @@
-Project setup
+<h1>Project setup</h1>
 
 1. Clone this repository.
 2. Create a new openFrameworks project, including the ofxOsc addon, using the openFrameworks Project Generator.
 3. Copy the contents of `[Your repository location]\tidal-av-project\of\apps\oscTemplate\src` to the `src` folder of the new openFrameworks project.
 4. Open in your IDE, build and run.
 
-BootTidal.hs
+<h2>BootTidal.hs</h2>
 
 The project relies on a modification to the BootTidal.hs file to send OSC messages to two targets:
 
@@ -42,6 +42,8 @@ $ n "~ 1 _ ~ 1 _ ~ 1"
 # mode "~ 0.3 _ ~ 0.6 _ ~ 1.0"
 ```
 
+<h2>Running the project</h2>
+
 You can test the openFrameworks project by:
 
 1. Running it your chosen IDE - you should see a red circle in the centre of the application window.
@@ -49,4 +51,6 @@ You can test the openFrameworks project by:
 
 The colour of the circle should modulate in time with the control pattern.
 
-*The purpose of this is to limit the messages received in openFrameworks. Since the messages are scheduled 'live' and not scheduled by the receiving application, too many messages sent at once could result in some events being dropped.
+You can view a short demonstration of the application [here](https://vimeo.com/717685440).
+
+*The purpose of this is to limit the messages sent to openFrameworks. Since the messages are scheduled 'live' and not scheduled by the receiving application, too many messages sent at once could result in some events being dropped.
