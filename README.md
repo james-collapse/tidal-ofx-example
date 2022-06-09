@@ -1,4 +1,8 @@
-<h1>Project setup</h1>
+<h2>Introduction</h2>
+
+This project demonstrates how to send messages from Tidal to openFrameworks using the OSC protocol. The project includes source files for an example application, which you can view a short demonstration of [here](https://vimeo.com/717685440).
+
+<h2>Project setup</h2>
 
 1. Clone this repository.
 2. Create a new openFrameworks project, including the ofxOsc addon, using the openFrameworks Project Generator.
@@ -50,7 +54,5 @@ You can test the openFrameworks project by:
 2. Sending a message with a `mode` control pattern from Tidal.
 
 The colour of the circle should modulate in time with the control pattern.
-
-You can view a short demonstration of the application [here](https://vimeo.com/717685440).
 
 *The purpose of this is to limit the messages sent to openFrameworks. Since the messages are scheduled 'live' and not scheduled by the receiving application, too many messages sent at once could result in some events being dropped.
