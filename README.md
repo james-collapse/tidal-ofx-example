@@ -1,12 +1,12 @@
 <h2>Introduction</h2>
 
-This project demonstrates how to send messages from Tidal to openFrameworks using the OSC protocol. The project includes source files for an example application, which you can view a short demonstration of [here](https://vimeo.com/717685440).
+This project demonstrates how to send messages from Tidal to openFrameworks over OSC. The project includes source files for an example application, which you can view a short demonstration of [here](https://vimeo.com/717685440).
 
 <h2>Project setup</h2>
 
 1. Clone this repository.
 2. Create a new openFrameworks project, including the ofxOsc addon, using the openFrameworks Project Generator.
-3. Copy the contents of `[Your repository location]\tidal-av-project\of\apps\oscTemplate\src` to the `src` folder of the new openFrameworks project.
+3. Copy the contents of `./of/apps/src` to the `src` folder of the new openFrameworks project.
 4. Open in your IDE, build and run.
 
 <h2>BootTidal.hs</h2>
