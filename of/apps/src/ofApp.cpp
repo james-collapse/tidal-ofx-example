@@ -8,6 +8,10 @@ void ofApp::setup(){
 	c = ofColor::red;
 	receiver.setup(PORT);
 	ofLog() << "Listening for OSC messages on port " << PORT;
+	// Initialise counter
+	frame = 0;
+	// Initialise Tidal variable
+	tidal = 0;
 }
 
 //--------------------------------------------------------------
@@ -16,58 +20,34 @@ void ofApp::update(){
 	{
 		ofxOscMessage m;
 		receiver.getNextMessage(m);
-		handleOscMessage(m);
 
-		string mode = getTidalParameter("mode");
-		float v = ofMap(stof(mode), 0.0, 1.0, 128, 255);
-		c.setHue(v);
-	}
+		// Get first message argument
+		float v = m.getArgAsFloat(0);
 
-}
+		ofLog() << "Value received from Tidal: " << v;
 
-//--------------------------------------------------------------
-void ofApp::handleOscMessage(ofxOscMessage m) {
-	if (m.getAddress() == "/oscplay")
-	{
-		for (int i = 0; i < m.getNumArgs(); i++)
-		{
-			if (i % 2 == 1)
-			{
-				string key = m.getArgAsString(i - 1);
-				string value = "";
+		// Set Tidal variable
+		tidal = v;
 
-				if (m.getArgType(i) == OFXOSC_TYPE_INT32) {
-					value = ofToString(m.getArgAsInt(i));
-				}
-				else if (m.getArgType(i) == OFXOSC_TYPE_FLOAT) {
-					value = ofToString(m.getArgAsFloat(i));
-				}
-				else if (m.getArgType(i) == OFXOSC_TYPE_STRING) {
-					value = m.getArgAsString(i);
-				}
-				else {
-					ofLog() << "Unhandled argument type: " + m.getArgTypeName(i);
-					throw;
-				}
-
-				// Add to map
-				tidalParameters.insert_or_assign(key, value);
-			}
-		}
-	}
-	else
-	{
-		ofLog() << "Unrecognised source address: " + m.getAddress();
-		throw;
+		// Reset counter
+		frame = 0;
 	}
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+	// Create a buffer to draw into
 	fbo.begin();
-
+	// Clear background
 	ofSetColor(255);
-	ofBackgroundGradient(ofColor(255), ofColor(128));	
+	// Set gradient background
+	ofBackgroundGradient(ofColor(255), ofColor(128));
+
+	// Change fill colour
+	float f = expImpulse(frame, 0.1);
+	c.setBrightness(200 * f * tidal);
+
+	// Draw circle
 	float tx = ofGetWidth() / 2;
 	float ty = ofGetHeight() / 2;
 	float r = ofGetWidth() / 4;
@@ -75,29 +55,28 @@ void ofApp::draw(){
 	ofPushMatrix();
 	
 	ofTranslate(tx, ty);
+
 	ofSetColor(c);
 	ofFill();
+	ofSetCircleResolution(100);
 	ofDrawCircle(0, 0, r);
-	
+
 	ofPopMatrix();
 
 	fbo.end();
 
+	// Draw buffer contents to screen
 	fbo.draw(0, 0);
+
+	// Increment counter
+	frame += 1;
 }
 
-string ofApp::getTidalParameter(string key) {
-	map<string, string>::iterator it = tidalParameters.find(key);
-
-	if (it != tidalParameters.end())
-	{
-		return it->second;
-	}
-	else
-	{
-		ofLog() << "Unable to find parameter with key: " + key;
-		throw;
-	}
+//--------------------------------------------------------------
+float ofApp::expImpulse(float x, float k) {
+	// Impulse function (maximum at x = 1/k)
+	float h = k * x;
+	return h * exp(1.0 - h);
 }
 
 //--------------------------------------------------------------

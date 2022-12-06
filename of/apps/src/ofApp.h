@@ -24,11 +24,11 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-		void handleOscMessage(ofxOscMessage m);
-		string getTidalParameter(string key);
-		
+		float expImpulse(float x, float k);
+
 		ofxOscReceiver receiver;
-		map<string, string> tidalParameters;
 		ofFbo fbo;
 		ofColor c;
+		int frame;
+		float tidal;
 };
