@@ -42,6 +42,6 @@ $ n "1 ~ 1 1"
 # vowel "a _ e i"
 ```
 
-The brightness of the circle should change, and you should see the vowel character appear in the upper left corner.
+The brightness of the circle should change in time with the pattern, and you should see the `vowel` value appear in the upper left corner.
 
 For more information about setting up OSC targets, see the [TidalCycles OSC documentation](http://tidalcycles.org/docs/configuration/MIDIOSC/osc/).
