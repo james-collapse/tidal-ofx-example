@@ -1,0 +1,10 @@
+setcps 0.35
+
+d1
+$ n "0 0 0 0"
+# s "bd"
+-- parameters sent to openFrameworks
+# ofx 1.0
+# vowel "o _ e i"
+
+hush

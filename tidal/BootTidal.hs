@@ -1,13 +1,18 @@
-:set -XOverloadedStrings
-:set prompt ""
-
 import Sound.Tidal.Context
 import System.IO (hSetEncoding, stdout, utf8)
 hSetEncoding stdout utf8
 
-let oscplay = OSC "/oscplay" Named {requiredArgs = ["mode"]}
-
-tidal <- startStream (defaultConfig {cFrameTimespan = 1/20}) [(superdirtTarget {oLatency = 0.2, oAddress = "127.0.0.1", oPort = 57120}, [superdirtShape]), (superdirtTarget {oAddress = "127.0.0.1", oPort = 2020, oSchedule = Live}, [oscplay])]
+let sdTarget    = superdirtTarget {oLatency = 0.1, oAddress = "127.0.0.1", oPort = 57120}
+    -- openFrameworks OSC target
+    ofxTarget   = Target {oName = "ofx", oAddress = "127.0.0.1", oPort = 2020, oLatency = 0.1, oSchedule = Live, oWindow = Nothing, oHandshake = False, oBusPort = Nothing}
+    -- openFrameworks OSC message structure
+    ofxShape    = OSC "/ofx" $ ArgList [("ofx", Nothing), ("vowel", Just $ VS "")]
+    -- Additional parameters
+    ofx         = pF "ofx"
+    -- Helper functions
+    fromBpm bpm = bpm / 60 / 4
+    g x         = gain (x/100)
+tidal <- startStream (defaultConfig {cFrameTimespan = 1/20}) [(sdTarget, [superdirtShape]), (ofxTarget, [ofxShape])]
 
 :{
 let p = streamReplace tidal
@@ -63,6 +68,12 @@ let p = streamReplace tidal
 let setI = streamSetI tidal
     setF = streamSetF tidal
     setS = streamSetS tidal
+    setR = streamSetR tidal
+    setB = streamSetB tidal
+:}
+
+:set prompt "tidal> "
+:set prompt-cont ""
     setR = streamSetR tidal
     setB = streamSetB tidal
 :}
