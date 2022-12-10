@@ -6,12 +6,22 @@ void ofApp::setup(){
 	ofSetVerticalSync(true);
 	fbo.allocate(ofGetWidth(), ofGetHeight());
 	c = ofColor::red;
+
+	// Set up OSC receiver
 	receiver.setup(PORT);
 	ofLog() << "Listening for OSC messages on port " << PORT;
+	
+	// Set up font
+	ofTrueTypeFont::setGlobalDpi(72);
+
+	verdana.load("verdana.ttf", 96, true, true);
+
 	// Initialise counter
 	frame = 0;
-	// Initialise Tidal variable
-	tidal = 0;
+	
+	// Initialise Tidal parameters
+	ofx = 0;
+	vowel = "";
 }
 
 //--------------------------------------------------------------
@@ -21,13 +31,15 @@ void ofApp::update(){
 		ofxOscMessage m;
 		receiver.getNextMessage(m);
 
-		// Get first message argument
-		float v = m.getArgAsFloat(0);
+		// Get message arguments
+		float first = m.getArgAsFloat(0);
+		string second = m.getArgAsString(1);
 
-		ofLog() << "Value received from Tidal: " << v;
+		ofLog() << "Values received from Tidal: " << first << ", " << second;
 
-		// Set Tidal variable
-		tidal = v;
+		// Set Tidal parameters
+		ofx = first;
+		vowel = second;
 
 		// Reset counter
 		frame = 0;
@@ -45,7 +57,7 @@ void ofApp::draw(){
 
 	// Change fill colour
 	float f = expImpulse(frame, 0.1);
-	c.setBrightness(200 * f * tidal);
+	c.setBrightness(200 * f * ofx);
 
 	// Draw circle
 	float tx = ofGetWidth() / 2;
@@ -60,8 +72,12 @@ void ofApp::draw(){
 	ofFill();
 	ofSetCircleResolution(100);
 	ofDrawCircle(0, 0, r);
-
+	
 	ofPopMatrix();
+
+	// Draw character
+	ofSetColor(ofColor::dimGrey);
+	verdana.drawString(vowel, 30, 96);
 
 	fbo.end();
 

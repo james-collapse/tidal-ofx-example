@@ -3,7 +3,7 @@
 #include "ofMain.h"
 #include "ofxOsc.h"
 
-// Listening port (move to appSettings.xml)
+// Listening port
 #define PORT 2020
 
 class ofApp : public ofBaseApp{
@@ -30,5 +30,9 @@ class ofApp : public ofBaseApp{
 		ofFbo fbo;
 		ofColor c;
 		int frame;
-		float tidal;
+		ofTrueTypeFont verdana;
+
+		// Parameters from Tidal
+		float ofx;
+		string vowel;
 };
