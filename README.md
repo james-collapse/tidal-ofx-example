@@ -8,8 +8,8 @@ This project demonstrates how to send messages from Tidal to openFrameworks over
 
 1. Clone this repository.
 2. Create a [new openFrameworks project](https://openframeworks.cc/learning/01_basics/create_a_new_project/) including the ofxOsc addon.
-3. Copy the contents of `of/apps/src` to the `src` folder of the new project.
-4. Copy the contents of `of/apps/data` to the `bin/data` folder of the new project.
+3. Copy the contents of `ofx/apps/src` to the `src` folder of the new project.
+4. Copy the contents of `ofx/apps/data` to the `bin/data` folder of the new project.
 5. Open the project in your IDE, clean and build.
 
 <h2>TidalCycles setup</h2>
