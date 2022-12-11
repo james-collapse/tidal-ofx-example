@@ -4,6 +4,18 @@ This project demonstrates how to send messages from Tidal to openFrameworks over
 
 [Demo video](https://vimeo.com/779945173)
 
+<h3>What is Tidal?</h3>
+
+[TidalCycles](https://tidalcycles.org/) (or 'Tidal' for short) allows you to make patterns with code. It includes language for describing flexible (e.g. polyphonic, polyrhythmic, generative) sequences of sounds, notes, parameters, and all kind of information.
+
+Tidal works together with [SuperCollider](https://supercollider.github.io/) and [SuperDirt](https://github.com/musikinformatik/SuperDirt) for audio output. SuperDirt does the job of interpreting Tidal patterns as commands to run in SuperCollider, while SuperCollider handles sound synthesis and output.
+
+Tidal can run in a text editor or on the command line. A user can write a pattern in the Tidal language, listen to the results, and update the pattern, all in real-time. This makes Tidal ideal for improvisation and performance.
+
+<h3>What is openFrameworks?</h3>
+
+[openFrameworks](https://openframeworks.cc/) is a creative coding toolkit written in C++. It offers a set of tools for developing graphical applications, with classes for including images, sounds, video, 3D graphics, shaders, and more.
+
 <h2>Project setup</h2>
 
 1. Clone this repository.
