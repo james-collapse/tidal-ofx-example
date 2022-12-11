@@ -16,17 +16,40 @@ Tidal can run in a text editor or on the command line. A user can write a patter
 
 [openFrameworks](https://openframeworks.cc/) is a creative coding toolkit written in C++. It offers a set of tools for developing graphical applications, with classes for including images, sounds, video, 3D graphics, shaders, and more.
 
+<h3>What is OSC?</h3>
+
+[Open Sound Control (OSC)](https://en.wikipedia.org/wiki/Open_Sound_Control) is a standard protocol for transferring messages across a network. It's supported by a variety of applications, including TidalCycles, openFrameworks, Processing, Pure Data and Max for Live.
+
+<h3>Tidal environment</h3>
+
+When a pattern is sent from Tidal, it is sent as a bundle of OSC events to a destination. The structure and destination for those events is configured in the Tidal [boot file](https://tidalcycles.org/docs/configuration/boot-tidal/). By editing the boot file, you can use Tidal to send arbitrary patterns to any application that supports OSC.
+
+The aim of this project is to show how Tidal patterns can be sent to both SuperCollider and openFrameworks.
+
+<h2>Requirements</h2>
+
+This project assumes the following are set up on your PC:
+
+* TidalCycles
+* SuperCollider
+* SuperDirt
+* openFrameworks
+
+To set up Tidal, SuperCollider and SuperDirt, follow the [Tidal installation](https://tidalcycles.org/docs/).
+
+To set up openFrameworks, follow the [openFrameworks installation](https://openframeworks.cc/download/).
+
 <h2>Project setup</h2>
 
 1. Clone this repository.
-2. Create a [new openFrameworks project](https://openframeworks.cc/learning/01_basics/create_a_new_project/) including the ofxOsc addon.
-3. Copy the contents of `ofx/apps/src` to the `src` folder of the new project.
-4. Copy the contents of `ofx/apps/data` to the `bin/data` folder of the new project.
-5. Open the project in your IDE, clean and build.
+2. Create a [new openFrameworks project](https://openframeworks.cc/learning/01_basics/create_a_new_project/) with the ofxOsc addon included.
+3. Copy the contents of `ofx/apps/src` from your clone to the `src` folder of the new project.
+4. Copy the contents of `ofx/apps/data` from your clone to the `bin/data` folder of the new project.
+5. Build the openFrameworks project.
 
-<h2>TidalCycles setup</h2>
+<h2>Tidal setup</h2>
 
-The example relies on a modification to the TidalCycles [boot file](https://tidalcycles.org/docs/configuration/boot-tidal/) to send OSC messages to an additional target. You can either use the boot file included in this repository under `tidal/BootTidal.hs`, or make the following change to your own boot file:
+The example relies on a modification to the Tidal [boot file](https://tidalcycles.org/docs/configuration/boot-tidal/) to send OSC messages to an additional target. You can either use the boot file included in this repository under `tidal/BootTidal.hs`, or make the following change to your own boot file:
 
 ```
 let sdTarget    = superdirtTarget {oLatency = 0.1, oAddress = "127.0.0.1", oPort = 57120}
@@ -40,9 +63,11 @@ let sdTarget    = superdirtTarget {oLatency = 0.1, oAddress = "127.0.0.1", oPort
 tidal <- startStream (defaultConfig {cFrameTimespan = 1/20}) [(sdTarget, [superdirtShape]), (ofxTarget, [ofxShape])]
 ```
 
-Once modified, reboot TidalCycles in your text editor.
+For more information about setting up OSC targets, see the [Tidal OSC documentation](http://tidalcycles.org/docs/configuration/MIDIOSC/osc/).
 
-After rebooting TidalCycles, run the openFrameworks application - a new window should appear with a black circle at the centre. 
+<h2>Running</h2>
+
+After loading Tidal in your text editor, run the openFrameworks application - a new window should appear with a black circle at the centre. 
 
 Next, send a pattern from Tidal containing `ofx` and `vowel` parameters - for example:
 
@@ -55,5 +80,3 @@ $ n "1 ~ 1 1"
 ```
 
 The brightness of the circle should change in time with the pattern, and you should see the `vowel` value appear in the upper left corner.
-
-For more information about setting up OSC targets, see the [TidalCycles OSC documentation](http://tidalcycles.org/docs/configuration/MIDIOSC/osc/).
